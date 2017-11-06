@@ -6,6 +6,7 @@ import java.util.Map;
 import org.springframework.stereotype.Service;
 
 import com.isb.chile.bean.ConfigProcesoNegocio;
+import com.isb.chile.bean.Parametro;
 
 @Service
 public abstract class ProcessAbstractFactory {
@@ -23,13 +24,16 @@ public abstract class ProcessAbstractFactory {
 	
 	
 	public void readFile(ConfigProcesoNegocio configProcesoNegocio, Map<String, String> parameters){
-		String fileLine="";
+		String fileLine="0016336311900000000800058162480012016-11-23 17:00:09";
 		// TODO Abrir el fichero indicado en la configuracion.
 		// TODO Leer cada linea del fichero.
 		// TODO Leer cada parámetro de la linea.
 		
-		// Ejemplo de lectura:
-		readParameter(fileLine, "idSolicitud", Integer.parseInt(configProcesoNegocio.getIdSolicitud()[0]),Integer.parseInt(configProcesoNegocio.getIdSolicitud()[1]),parameters);
+		for (Parametro param : configProcesoNegocio.getParametros()) {
+			// Ejemplo de lectura:
+//			readParameter(fileLine, "idSolicitud", Integer.parseInt(configProcesoNegocio.getIdSolicitud()[0]),Integer.parseInt(configProcesoNegocio.getIdSolicitud()[1]),parameters);
+			readParameter(fileLine, param.getNomParam(), param.getInicio(),param.getFin(),parameters);
+		} 
 	}
 	
 	/*

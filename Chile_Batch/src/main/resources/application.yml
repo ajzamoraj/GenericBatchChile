@@ -21,10 +21,28 @@ configuration:
       ruta: C:\\Proyectos\BatchChile\IdProceso23-11-2016
       nombre: "CJMO"  
       idSolicitud: ["10","20"]
+      parametros:
+        - 
+            nomParam: "idsolicitud"
+            inicio: "10"
+            fin: "20"
+        - 
+            nomParam: "cuenta"
+            inicio: "0"
+            fin: "10"          
     - 
       ruta: C:\\Proyectos\BatchChile\IdProceso23-11-2016
       nombre: "CJPYME"        
       idSolicitud: ["10","20"]
+      parametros: 
+        - 
+            nomParam: "idsolicitud"
+            inicio: "10"
+            fin: "20"
+        - 
+            nomParam: "cuenta"
+            inicio: "0"
+            fin: "10" 
 
 # Ruta de destino de los archivos CSV (no informar para usar la misma ruta que el JAR)
 
