@@ -39,7 +39,6 @@ public class FileProcessor {
 				if(factory==null){
 					LOGGER.error("No se reconoce el proceso correspondiente al nombre " + configProcesoNegocio.getNombre());
 				}else{
-					
 					// Lanza la ejecucion del Factory
 					factory.processFile(params, configProcesoNegocio);				
 				}
