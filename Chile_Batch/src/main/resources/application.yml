@@ -1,0 +1,32 @@
+logging: 
+  level:
+     org: 
+        springframework: 
+            cloud:  
+                task: DEBUG
+spring: 
+  application: 
+     name: chile-batch 
+  cloud: 
+    task: 
+      initialize:
+        enable: false
+        
+configuration: 
+# Ruta de origen de los archivos
+  ruta: C:\\Proyectos\BatchChile\IdProceso23-11-2016
+  procesosNegocio:
+    - 
+      ruta: C:\\Proyectos\BatchChile\IdProceso23-11-2016
+      nombre: "CJMO"  
+      idSolicitud: ["10","20"]
+    - 
+      ruta: C:\\Proyectos\BatchChile\IdProceso23-11-2016
+      nombre: "CJPYME"        
+      idSolicitud: ["10","20"]   
+
+# Ruta de destino de los archivos CSV (no informar para usar la misma ruta que el JAR)
+
+#uploadPath: \\an\\santander\\geoban\\CustomerContact\\SARs\\PPIOnline
+uploadPath: C:\\usr\PPIOnline      
+
